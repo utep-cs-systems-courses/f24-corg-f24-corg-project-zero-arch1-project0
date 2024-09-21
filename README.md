@@ -81,7 +81,7 @@ Please observe the following standard C coding practices:
   Be sure to watch this video on how to [render bitmap fonts](https://www.youtube.com/playlist?list=PLW7kRC02iWTIxCZzo2IKSNpN15lRscCs2).
  
  
- # Learning outcomes
+ # Learning outcome
   
  - ability to use emacs editor and linux command-line compilation tools using bash shell
  - git: ability to clone repo and add/commit/push changes 
