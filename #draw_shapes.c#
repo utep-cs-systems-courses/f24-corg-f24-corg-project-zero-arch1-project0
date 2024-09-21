@@ -27,26 +27,22 @@ void print_triangle(int leftCol, int size)
 }
 
 void print_arrow(int leftCol, int size) {
+    // Print the arrowhead (triangle)
     for (int row = 0; row <= size; row++) {
-        int minCol = leftCol + size - row;
-        int maxCol = leftCol + size + row;
-        int col;
-
-        for (col = 0; col < minCol; col++) putchar(' ');
-        for (; col <= maxCol; col++) putchar('*');
-
+        int minCol = leftCol + size - row, maxCol = leftCol + size + row;
+        int col;        for (col = 0; col < minCol; col++) putchar(' ');
+        for (       ; col <= maxCol; col++) putchar('*');
         putchar('\n');
     }
 
-    int tailWidth = size;
-    int tailStartCol = leftCol + (size - tailWidth / 2);
+    // Print the tail with the same width as the arrowhead but centered
+    int tailWidth = (size * 2) + 1; // Width of the arrowhead's last row
+    int tailLeftCol = leftCol + size - (tailWidth / 2); // Center the tail
 
     for (int row = 0; row < size; row++) {
         int col;
-
-        for (col = 0; col < tailStartCol; col++) putchar(' ');
-        for (; col < tailStartCol + tailWidth; col++) putchar('*');
-
+        for (col = 0; col < tailLeftCol; col++) putchar(' ');
+        for (       ; col < tailLeftCol + tailWidth; col++) putchar('*');
         putchar('\n');
     }
 }
